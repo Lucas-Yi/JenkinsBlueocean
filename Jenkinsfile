@@ -21,9 +21,8 @@ pipeline {
 
         stage('test') {
           steps {
-            sh '''#!/bin/sh
-# This is a comment!
-echo Hello World'''
+            sh '''$ chmod a+rx my-script.sh
+$ ./my-script.sh'''
           }
         }
 
