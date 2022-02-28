@@ -21,7 +21,7 @@ pipeline {
 
         stage('test') {
           steps {
-            git(url: 'git@github.com:Lucas-Yi/JenkinsBlueocean.git', branch: 'master')
+            echo 'testing'
           }
         }
 
