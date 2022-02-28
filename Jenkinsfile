@@ -29,7 +29,7 @@ pipeline {
         stage('test') {
           steps {
             sh '''$ chmod a+rx my-script.sh
-$ ./my-script.sh'''
+                  $ ./my-script.sh'''
           }
         }
 
