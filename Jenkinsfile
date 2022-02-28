@@ -7,13 +7,6 @@ pipeline {
         sleep 1
       }
     }
-    stage('prepare1') {
-      steps {
-        withMaven(maven : 'apache-maven-3.6.1') {
-            bat'mvn clean compile'
-          }
-        }
-    }
 
     stage('build') {
       parallel {
@@ -28,8 +21,7 @@ pipeline {
 
         stage('test') {
           steps {
-            sh '''$ chmod a+rx my-script.sh
-                  $ ./my-script.sh'''
+            git(url: 'git@github.com:Lucas-Yi/JenkinsBlueocean.git', branch: 'master')
           }
         }
 
