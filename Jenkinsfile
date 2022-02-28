@@ -7,7 +7,7 @@ pipeline {
         sleep 1
       }
     }
-    stage('prepare') {
+    stage('prepare1') {
       steps {
         withMaven(maven : 'apache-maven-3.6.1') {
             bat'mvn clean compile'
